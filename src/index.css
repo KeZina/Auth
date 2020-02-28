@@ -1,14 +1,20 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(249,251,252);
   margin: 0;
 }
 
 #general-container {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 92vh;
   width: 66vw;
-  border: 2px solid black;
   margin: auto;
-  padding: 4%;
+  padding: 4vh;
+}
+
+#title {
+  margin-bottom: 3vh;
 }
 
 #title > div {
@@ -35,4 +41,60 @@ body {
 #title > h1 {
   font-weight: 500;
   color: rgb(68,34,105);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  background-color: 2px solid black;
+}
+
+#names {
+  display: flex;
+  justify-content: space-between;
+}
+
+#names > label {
+  width: 45%;
+  color: rgb(131,130,128);
+}
+
+#names > label > input, #form > label > input {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid rgb(107,164,178);
+  outline: none;
+}
+
+#names > label > input::placeholder {
+  color: black;
+}
+
+#form > label {
+  color: rgb(131,130,128);
+}
+
+#form > label > input {
+  padding: 1em 0;
+}
+
+#form > input[type='submit'] {
+  display: block;
+  font-size: 1.3em;
+  color: rgb(212,212,224);
+  width: 30vw;
+  height: 10vh;
+  margin: auto;
+  margin-top: 0vh;
+  margin-bottom: 0;
+  border: none;
+  background: linear-gradient(rgb(76,84,138), rgb(68,34,105));
+  border-radius: 5em;
 }
