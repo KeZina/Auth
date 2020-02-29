@@ -97,4 +97,6 @@ body {
   border: none;
   background: linear-gradient(rgb(76,84,138), rgb(68,34,105));
   border-radius: 5em;
+  cursor: pointer;
 }
+
