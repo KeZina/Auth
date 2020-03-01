@@ -5,7 +5,7 @@ const Title = () => {
         <header id = 'title'>
             <div>
                 <div />
-                <span>yourtext</span>
+                <span>mytext</span>
             </div>
             <h1>Registration Form</h1>
         </header>

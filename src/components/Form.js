@@ -1,32 +1,27 @@
 import React from 'react';
-import firebase from '../firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import { createUser } from '../utils/store';
 
 const Form = () => {
-    const db = firebase.firestore()
+    const store = useSelector(state => state);
+    const dispatch = useDispatch();
 
-    const genPassword = () => Math.floor(Math.random() * 1e15).toString();
-
-    const handleRegister = async e => {
+    const handleSubmit = e => {
         e.preventDefault();
+
         const {firstName, secondName, username, email, phone} = e.target;
-
-        try {
-            await firebase.auth().createUserWithEmailAndPassword(email.value, genPassword());
-
-            await db.collection('users').add({
-                firstName: firstName.value,
-                secondName: secondName.value,
-                username: username.value,
-                email: email.value,
-                phone: phone.value
-            })
-        } catch(e) {
-            alert(e);
-        }
+    
+        dispatch(createUser({
+            firstName: firstName.value,
+            secondName: secondName.value,
+            username: username.value,
+            email: email.value,
+            phone: phone.value
+        }));
     }
 
     return (
-        <form id = 'form' onSubmit = {handleRegister}>
+        <form id = 'form' onSubmit = {handleSubmit}>
             <div id = 'names'>
                 <label>
                     First Name
