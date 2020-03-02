@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createUser } from '../utils/store';
 
 const Form = () => {
-    const store = useSelector(state => state);
     const dispatch = useDispatch();
 
     const handleSubmit = e => {

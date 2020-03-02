@@ -4,13 +4,39 @@ body {
   margin: 0;
 }
 
-#general-container {
+.general-container {
   display: flex;
   flex-direction: column;
   height: 92vh;
   width: 66vw;
   margin: auto;
   padding: 4vh;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 2s;
+  z-index: 2;
+}
+.start {
+  background-color: rgb(68,34,105);
+}
+.end {
+  background-color: inherit;
+}
+
+#rocket {
+  position: absolute;
+  top: -30vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('/rocket69.svg') no-repeat;
+  background-size: cover;
 }
 
 #title {
@@ -98,5 +124,5 @@ body {
   background: linear-gradient(rgb(76,84,138), rgb(68,34,105));
   border-radius: 5em;
   cursor: pointer;
+  box-shadow: 1.5em 1.5em 1.2em .2em rgb(178, 178, 187);
 }
-
